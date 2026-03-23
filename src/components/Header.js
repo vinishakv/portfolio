@@ -4,10 +4,10 @@ import { useState } from 'react'
 export default function Header(){
     const[toggleMenu,setToggleMenu]= useState(false);
     return <header className="flex justify-between px-10 py-2 bg-primary">
-        <a className="font-bold text-black" href="#"> Vinisha Kora Venkatesalu</a>
+        <a className="font-bold text-black" href="#home"> Vinisha Kora Venkatesalu</a>
         <nav className="hidden md:block">
             <ul className="flex text-white ">
-            <li><a href="#">Home</a></li>
+            <li><a href="#home">Home</a></li>
             <li><a href="#about">About</a></li>
             <li><a href="#projects">Projects</a></li>
             <li><a href="#resume">Resume</a></li>
@@ -16,7 +16,7 @@ export default function Header(){
         </nav>
         {toggleMenu && <nav className="block md:hidden">
             <ul onClick={() => setToggleMenu(!toggleMenu)} className="flex flex-col text-white mobile-nav">
-            <li><a href="#">Home</a></li>
+            <li><a href="#home">Home</a></li>
             <li><a href="#about">About</a></li>
             <li><a href="#projects">Projects</a></li>
             <li><a href="#contact">Contact</a></li>
